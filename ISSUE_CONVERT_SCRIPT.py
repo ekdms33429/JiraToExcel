@@ -1,7 +1,6 @@
 import pandas as pd
-df3 = pd.read_csv("D:/KIWI/2021 내부 과제/CSVtoXLSX/BLACKBERRY_Critical_Major/KiwiPlus JIRA 2021-04-26T17_13_13+0900.csv")
+df3 = pd.read_csv("csvFilePath")
 df3.fillna("", inplace=True)
-#df4 = pd.read_csv("C:/Users/kiwiplus/Desktop/test4.csv", encoding = 'cp949')
 columns_list = ["생성일", "우선순위", "이슈 키",'영향 받는 버전', '레이블','레이블.1', '레이블.2', "설명", "상태", "해결일", "보고자", "담당자"]
 
 parents = ['테스트 단말', '테스트단말', '보호자']
@@ -145,5 +144,5 @@ for i in range((explain.size)):
             continue
 
                 
-subset.to_csv("D:/KIWI/2021 내부 과제/CSVtoXLSX/BLACKBERRY_Critical_Major/22CVT_KiwiPlus JIRA 2021-04-26T17_13_13+0900.csv", encoding="utf-8-sig")
+subset.to_csv("csvFilePath", encoding="utf-8-sig")
             
